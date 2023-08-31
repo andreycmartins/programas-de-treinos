@@ -1,17 +1,50 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <div class="title">
+      <ion-button fill="clear"><ion-icon aria-hidden="true" name="close" class="title"></ion-icon></ion-button>
+      <ion-title class="title">Programas <br>de Treinos</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar id="searchbar">
+    <ion-input placeholder="Pesquise o treino de sua preferência"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-segment value="custom">
+    <ion-segment-button value="custom">
+      <ion-text>TODOS</ion-text>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-text>LANÇAMENTOS</ion-text>
+    </ion-segment-button>
+    <ion-segment-button value="buttons">
+      <ion-text>POPULARES</ion-text>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-grid [fixed]="true">
+    <ion-row class="image-table">
+      <ion-col><button (click)="presentAlert()"><img src="../../assets/vegeta.jpeg"/></button></ion-col>
+      <ion-col><button (click)="presentAlert()"><img src="../../assets/disturbed.png"/></button></ion-col>
+    </ion-row>
+    <ion-row class="image-table">
+      <ion-col><button (click)="presentAlert()"><img src="../../assets/disturbed.png"/></button></ion-col>
+      <ion-col><button (click)="presentAlert()"><img src="../../assets/vegeta.jpeg"/></button></ion-col>
+    </ion-row>
+    <ion-row class="image-table">
+      <ion-col><button (click)="presentAlert()"><img src="../../assets/vegeta.jpeg"/></button></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
+<ion-footer>
+</ion-footer>
