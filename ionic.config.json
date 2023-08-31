@@ -1,0 +1,7 @@
+{
+  "name": "programas-de-treinos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
